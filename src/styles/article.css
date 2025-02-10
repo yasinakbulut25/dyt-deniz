@@ -1,0 +1,75 @@
+.article-content {
+  font-weight: 500;
+  overflow-x: auto;
+  padding: 0 0 1rem 0;
+}
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+  font-size: 18px;
+  color: #eab308;
+}
+
+.article-content p {
+  margin: 0.5rem 0;
+}
+
+.article-content a {
+  color: #1969ff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.article-content img {
+  border-radius: 4px;
+  object-fit: contain;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.article-content ol,
+.article-content ul {
+  padding-left: 1.75rem;
+  list-style-type: unset;
+  margin: 1rem 0;
+}
+
+.article-content table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin: 2rem auto;
+  overflow-x: scroll;
+  min-width: max-content;
+}
+
+.article-content tr:nth-of-type(odd) {
+  background: #f1f5f9;
+}
+
+.article-content th {
+  background: #eab308;
+  color: white;
+  font-weight: bold;
+}
+
+.article-content td,
+.article-content th {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  text-align: left;
+  font-size: 16px;
+}
