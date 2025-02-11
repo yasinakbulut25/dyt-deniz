@@ -60,16 +60,16 @@ async function ServicesSection({ isDetailPage, url }) {
                   <p className="text-sm text-gray-600 text-pretty">
                     {service.description}
                   </p>
-                  <span className="flex items-center gap-1 text-xs text-purple-500">
+                  <span className="flex items-center gap-1 text-xs text-yellow-500">
                     Detaylı İncele
                     <span>
-                      <ChevronRight width={12} className="text-purple-500" />
+                      <ChevronRight width={12} className="text-yellow-500" />
                     </span>
                   </span>
                 </div>
                 <BorderBeam
                   colorFrom="#eab308"
-                  colorTo="#c084fc"
+                  colorTo="#fff085"
                   size={150}
                   duration={10}
                   delay={9 + index * 1.5}

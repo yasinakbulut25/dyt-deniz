@@ -29,7 +29,7 @@ async function ContactSection() {
         <ContactBoxes />
         <BorderBeam
           colorFrom="#eab308"
-          colorTo="#c084fc"
+          colorTo="#fff085"
           size={300}
           duration={10}
           delay={9}

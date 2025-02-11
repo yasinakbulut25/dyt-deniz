@@ -61,7 +61,7 @@ async function CommentsSection() {
         className="flex items-center justify-center mt-6"
       >
         <Button
-          className="bg-purple-600 text-white"
+          className="bg-yellow-400 text-white"
           startContent={<ChatDotsIcon className="w-4 h-4" />}
           as={Link}
           href="/yorumlar"

@@ -10,13 +10,13 @@ function CommentCard({ review, isCommentsPage }) {
     <figure
       className={cn(
         "relative md:max-w-[350px] max-w-80 cursor-pointer overflow-hidden rounded-xl border p-4",
-        "border-gray-950/[.1] hover:border-purple-500 duration-300",
+        "border-gray-950/[.1] hover:border-yellow-400 duration-300",
         isCommentsPage && "bg-white mx-auto"
       )}
     >
       <div className="flex flex-row items-center gap-2">
         <div className="flex flex-col">
-          <h4 className="text-sm text-purple-600 font-medium">{name}</h4>
+          <h4 className="text-sm text-yellow-500 font-medium">{name}</h4>
           <p className="text-xs text-slate-600">{turkishDate}</p>
         </div>
       </div>

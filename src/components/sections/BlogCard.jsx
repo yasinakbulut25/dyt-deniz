@@ -23,13 +23,13 @@ function BlogCard({ post, index }) {
               className="max-h-[250px] h-auto w-full object-cover object-center transition duration-500 group-hover:scale-105"
             />
           </div>
-          <h3 className="text-lg font-bold text-black group-hover:text-purple-600 duration-300">
+          <h3 className="text-lg font-bold text-black group-hover:text-yellow-500 duration-300">
             {post.title}
           </h3>
           <div className="flex items-center justify-between gap-2">
             <span className="text-slate-500 text-sm">{turkishDate}</span>
             <Button
-              className="bg-purple-600 text-white"
+              className="bg-yellow-400 text-white"
               size="sm"
               endContent={<ChevronRight className="w-4 h-4" />}
             >

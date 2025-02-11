@@ -14,7 +14,7 @@ async function ContactBoxes() {
       {activeData.map((item, index) => (
         <Button
           key={index}
-          className="bg-purple-50 text-purple-600 py-2 px-4 rounded-full"
+          className="bg-yellow-400 text-white py-2 px-4 rounded-full"
           endContent={<ChevronRight width={16} height={16} />}
           as={Link}
           target="_blank"

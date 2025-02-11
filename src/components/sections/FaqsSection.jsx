@@ -33,7 +33,7 @@ export default async function FaqsSection() {
           <Accordion type="multiple">
             {activeData.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="[&[data-state=open]]:text-purple-600">
+                <AccordionTrigger className="[&[data-state=open]]:text-yellow-500">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent>{faq.answer}</AccordionContent>

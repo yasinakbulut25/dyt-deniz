@@ -33,7 +33,7 @@ async function AboutSection() {
             dangerouslySetInnerHTML={{ __html: content }}
           />
           <Button
-            className="bg-purple-600 text-white mt-8"
+            className="bg-yellow-400 text-white mt-8"
             endContent={<ChevronRight className="w-4 h-4" />}
             as={Link}
             href="/hakkimda"

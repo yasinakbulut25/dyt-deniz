@@ -16,9 +16,9 @@ async function HeroSection() {
         <div className="lg:w-2/3 text-center mx-auto flex flex-col md:gap-10 gap-6 items-center">
           <BlurFade delay={0.25} inView>
             <h1 className="text-gray-900 text-pretty font-bold text-2xl sm:text-4xl md:text-5xl xl:text-6xl">
-              <span className="block text-purple-600 mb-5">{titleName}</span>
+              <span className="block text-yellow-500 mb-5">{titleName}</span>
               {titleBlack}{" "}
-              <span className="text-purple-600">{titlePurple}</span>
+              <span className="text-yellow-500">{titlePurple}</span>
             </h1>
           </BlurFade>
           <BlurFade delay={0.5} inView>

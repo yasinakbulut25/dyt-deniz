@@ -56,7 +56,7 @@ async function ServiceDetail({ params }) {
             alt={title}
           />
         </div>
-        <i className="border-l-2 border-purple-400 pl-3 py-1 text-sm mt-3">
+        <i className="border-l-2 border-yellow-400 pl-3 py-1 text-sm mt-3">
           {description}
         </i>
         <div
