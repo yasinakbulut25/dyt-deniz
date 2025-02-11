@@ -3,6 +3,7 @@ import Blogs from "../../yazilar/page";
 import moment from "moment";
 import "moment/locale/tr";
 import { getBlog } from "@/api/endpoints";
+import { BASE_URL } from "@/app/layout";
 
 export async function generateMetadata({ params }) {
   const { url } = params;
@@ -25,7 +26,7 @@ export async function generateMetadata({ params }) {
       title: title,
       description: content.slice(0, 160),
       images: [image],
-      url: `https://arzuyurci.com/yazi/${url}`,
+      url: `${BASE_URL}yazi/${url}`,
     },
     twitter: {
       card: "summary_large_image",

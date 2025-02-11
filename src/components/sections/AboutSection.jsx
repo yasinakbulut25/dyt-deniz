@@ -44,11 +44,11 @@ async function AboutSection() {
         <BlurFade delay={0.75} inView>
           <div className="relative mx-auto rounded-lg overflow-hidden">
             <Image
-              className="object-cover w-full h-auto rounded-lg max-h-[400px]"
+              className="object-contain w-full h-auto rounded-lg max-h-[550px]"
               src={image}
               alt="Uzm. Diyetisyen Almina Meşin"
               width={500}
-              height={500}
+              height={700}
             />
           </div>
         </BlurFade>

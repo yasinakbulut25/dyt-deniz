@@ -5,6 +5,7 @@ import Image from "next/image";
 import CommentsSection from "@/components/sections/CommentsSection";
 import { getUser } from "@/api/endpoints";
 import { sectionKeys } from "@/routes";
+import { BASE_URL } from "../layout";
 
 export async function generateMetadata() {
   const data = await getUser();
@@ -27,7 +28,7 @@ export async function generateMetadata() {
       title: title,
       description: content.slice(0, 160),
       images: [image],
-      url: `https://arzuyurci.com/hakkimda`,
+      url: `${BASE_URL}hakkimda`,
     },
     twitter: {
       card: "summary_large_image",
@@ -52,20 +53,20 @@ async function AboutPage() {
         sectionKey={sectionKeys.about}
       />
       <div className="flex flex-col items-center gap-8 mb-12">
-        <BlurFade delay={0.5} inView>
+        <BlurFade delay={0.25} inView>
           <div
             className="article-content text-md text-black font-medium max-w-4xl text-pretty"
             dangerouslySetInnerHTML={{ __html: fullContent }}
           />
         </BlurFade>
-        <BlurFade delay={0.75} inView>
+        <BlurFade delay={0.25} inView>
           <div className="relative mx-auto rounded-lg overflow-hidden">
             <Image
-              className="object-contain w-full h-auto max-h-[500px]"
+              className="object-contain w-full h-auto max-h-[550px]"
               src={image}
               alt="Uzm. Diyetisyen Almina Meşin"
               width={500}
-              height={500}
+              height={700}
             />
           </div>
         </BlurFade>

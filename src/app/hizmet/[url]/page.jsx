@@ -23,7 +23,7 @@ export async function generateMetadata({ params }) {
       title: title,
       description: content.slice(0, 160),
       images: [image],
-      url: `https://arzuyurci.com/hizmet/${url}`,
+      url: `${BASE_URL}hizmet/${url}`,
     },
     twitter: {
       card: "summary_large_image",

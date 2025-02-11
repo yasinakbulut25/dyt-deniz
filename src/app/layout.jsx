@@ -8,7 +8,7 @@ const montserrat = Montserrat({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
-export const BASE_URL = "https://arzuyurci.com/";
+export const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
 export default function RootLayout({ children }) {
   return (
