@@ -85,7 +85,7 @@ function Navbar() {
   return (
     <nav className="flex md:justify-center justify-start items-center w-full z-[50] py-4 duration-300 text-black bg-transparent">
       <div className="lg:flex flex-col hidden gap-4 items-center mx-auto justify-between w-full max-w-7xl h-full">
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-2 text-center">
           <Image
             className="rounded-md object-cover w-[300px] h-[150px]"
             src="/uploads/logo.png"
@@ -93,7 +93,9 @@ function Navbar() {
             width={300}
             height={150}
           />
-          <b className="text-sm text-black"><i>This is the place where your dreams come true!</i></b>
+          <b className="text-sm text-black">
+            <i>This is the place where your dreams come true!</i>
+          </b>
         </div>
         <div className="flex items-center gap-2">
           {routes.map((route, index) => (
@@ -118,7 +120,7 @@ function Navbar() {
               {route.hasDropdown &&
                 dropdownRoutes[route.sectionKey] &&
                 dropdownRoutes[route.sectionKey].length > 0 && (
-                  <div className="absolute top-[72px] left-0 w-max max-w-[240px] hidden shadow-md group-hover:flex flex-col bg-white">
+                  <div className="absolute top-[72px] left-0 w-max min-w-full max-w-[240px] hidden shadow-md group-hover:flex flex-col bg-white z-50">
                     {dropdownRoutes[route.sectionKey].map((item, index) => (
                       <Link
                         key={index}
@@ -135,26 +137,26 @@ function Navbar() {
         </div>
       </div>
       {/* Mobile Menu */}
-      <div className="flex justify-between items-center w-full lg:hidden">
+      <div className="relative flex justify-between items-center w-full lg:hidden">
         <Button
-          className="min-w-max px-3"
+          className="absolute top-2 left-4 min-w-max px-3"
           color="secondary"
           onClick={onOpen}
           startContent={
             isOpen ? <XMarkIcon width={24} /> : <BarsIcon width={24} />
           }
         />
-        <div className="flex items-center gap-2">
-          <h3 className="text-black font-bold text-lg">
-            Uzm. Diyetisyen Almina Meşin
-          </h3>
+        <div className="w-full flex justify-center items-center flex-col text-center gap-2">
           <Image
-            className="rounded-md object-cover"
+            className="rounded-md object-cover w-[300px] h-[150px]"
             src="/uploads/logo.png"
             alt="Uzm. Diyetisyen Almina Meşin"
-            width={50}
-            height={50}
+            width={300}
+            height={150}
           />
+          <b className="text-sm text-black">
+            <i>This is the place where your dreams come true!</i>
+          </b>
         </div>
       </div>
       <Drawer

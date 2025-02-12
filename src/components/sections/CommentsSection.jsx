@@ -23,9 +23,6 @@ async function CommentsSection() {
 
   if (!data || !activeData || activeData.length === 0 || !section) return;
 
-  const firstRow = activeData.slice(0, activeData.length / 2);
-  const secondRow = activeData.slice(activeData.length / 2);
-
   return (
     <section className="mb-12" id="yorumlar">
       <SectionTitle
@@ -33,26 +30,11 @@ async function CommentsSection() {
         sectionKey={sectionKeys.comments}
       />
       <BlurFade delay={0.5} inView>
-        <div className="relative max-w-7xl mx-auto flex w-full flex-col items-center justify-center overflow-hidden">
-          <Marquee
-            pauseOnHover
-            style={{ "--duration": `${Math.floor(firstRow.length * 8)}s` }}
-          >
-            {firstRow.map((review, index) => (
-              <CommentCard key={index} review={review} />
-            ))}
-          </Marquee>
-          <Marquee
-            reverse
-            pauseOnHover
-            style={{ "--duration": `${Math.floor(secondRow.length * 8)}s` }}
-          >
-            {secondRow.map((review, index) => (
-              <CommentCard key={index} review={review} />
-            ))}
-          </Marquee>
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-white"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-white"></div>
+        <div className="relative max-w-7xl mx-auto flex w-full gap-4 flex-wrap items-center justify-center overflow-hidden">
+          {activeData.slice(0, 8).map((review, index) => (
+            <CommentCard key={index} review={review} />
+          ))}
+          {/* <div className="pointer-events-none absolute left-0 bottom-0 w-full h-[200px] bg-gradient-to-t from-white"></div> */}
         </div>
       </BlurFade>
       <BlurFade

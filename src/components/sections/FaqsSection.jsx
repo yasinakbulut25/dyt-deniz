@@ -31,9 +31,9 @@ export default async function FaqsSection() {
       <BlurFade delay={0.5} inView>
         <div className="max-w-3xl mx-auto">
           <Accordion type="multiple">
-            {activeData.map((faq, index) => (
+            {activeData.reverse().map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="[&[data-state=open]]:text-yellow-500">
+                <AccordionTrigger className="[&[data-state=open]]:text-yellow-500 font-semibold">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent>{faq.answer}</AccordionContent>

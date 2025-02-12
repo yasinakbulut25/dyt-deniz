@@ -5,6 +5,7 @@ import ContactBoxes from "./ContactBoxes";
 import ContactForm from "./ContactForm";
 import { getSections, getUser } from "@/api/endpoints";
 import { sectionKeys } from "@/routes";
+import BlurFade from "@/components/ui/blur-fade";
 
 async function ContactSection() {
   const data = await getUser();
@@ -17,16 +18,18 @@ async function ContactSection() {
 
   if (!data || !section) return;
 
-  const { map } = data.admin;
+  const { map, address } = data.admin;
   return (
-    <section className="mb-12 px-4" id="iletisim">
+    <section className="px-4" id="iletisim">
       <SectionTitle
         icon={<BellIcon className="w-4 h-4" color="#eab308" />}
         sectionKey={sectionKeys.contact}
       />
       <div className="relative max-w-7xl mx-auto bg-white md px-8 py-12 rounded-2xl mt-4">
-        <ContactForm map={map} />
-        <ContactBoxes />
+        <div className="grid md:grid-cols-2 gap-4 items-center">
+          <ContactForm />
+          <ContactBoxes address={address} />
+        </div>
         <BorderBeam
           colorFrom="#eab308"
           colorTo="#fff085"
@@ -35,6 +38,18 @@ async function ContactSection() {
           delay={9}
         />
       </div>
+      {map && (
+        <BlurFade delay={0.5} inView>
+          <iframe
+            className="rounded-xl w-full h-[400px]"
+            src={map}
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </BlurFade>
+      )}
     </section>
   );
 }

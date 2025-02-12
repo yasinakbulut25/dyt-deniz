@@ -24,9 +24,9 @@ export default function Page() {
         <ServicesSection />
         <CommentsSection />
         <BlogsSection />
-        <Gallery />
-        <ContactSection />
+        {/* <Gallery /> */}
         <FaqsSection />
+        <ContactSection />
       </Suspense>
     </div>
   );

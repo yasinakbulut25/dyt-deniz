@@ -1,6 +1,7 @@
 import React from "react";
 import { getService } from "@/api/endpoints";
 import ServicesSection from "@/components/sections/ServicesSection";
+import { BASE_URL } from "@/app/layout";
 
 export async function generateMetadata({ params }) {
   const { url } = params;

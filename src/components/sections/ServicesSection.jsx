@@ -41,43 +41,64 @@ async function ServicesSection({ isDetailPage, url }) {
   return (
     <section className="w-full max-w-7xl mx-auto px-4 mb-12" id="hizmetler">
       <SectionTitle sectionKey={sectionKeys.services} />
-      <div className="columns-1 sm:columns-2 lg:columns-3">
-        {activeData.map((service, index) => (
-          <Link key={index} href={`/hizmet/${service.url}`}>
-            <BlurFade className="mb-8" inView>
-              <div className="relative w-full sm:max-w-full max-w-[400px] mx-auto bg-white shadow-lg hover:scale-105 duration-300 rounded-lg overflow-hidden">
-                <Image
-                  className="object-cover w-full max-h-[200px] -z-1"
-                  src={service.image}
-                  width={350}
-                  height={200}
-                  alt={service.title}
-                />
-                <div className="flex flex-col gap-3 py-4 px-6">
-                  <h3 className="text-lg font-bold text-black">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 text-pretty">
-                    {service.description}
-                  </p>
-                  <span className="flex items-center gap-1 text-xs text-yellow-500">
-                    Detaylı İncele
-                    <span>
-                      <ChevronRight width={12} className="text-yellow-500" />
+      <div
+        className={`grid ${
+          isDetailPage ? "" : "lg:grid-cols-2"
+        } w-full mx-auto gap-4 items-center`}
+      >
+        {!isDetailPage && (
+          <div className="flex w-full h-full">
+            <Image
+              className="object-cover w-full max-h-[940px] rounded-lg -z-1"
+              src="/uploads/images/almina-mesin-2.png"
+              width={500}
+              height={900}
+              alt="Dyt. Almina Mesin"
+            />
+          </div>
+        )}
+        <div
+          className={`grid ${
+            isDetailPage ? "md:grid-cols-2" : "lg:grid-cols-1 md:grid-cols-2"
+          } gap-4`}
+        >
+          {activeData.map((service, index) => (
+            <Link key={index} href={`/hizmet/${service.url}`}>
+              <BlurFade className="mb-8" inView>
+                <div className="relative w-full sm:max-w-full max-w-[400px] mx-auto bg-white shadow-lg hover:scale-105 duration-300 rounded-lg overflow-hidden">
+                  <Image
+                    className="object-cover w-full max-h-[250px] -z-1"
+                    src={service.image}
+                    width={500}
+                    height={250}
+                    alt={service.title}
+                  />
+                  <div className="flex flex-col gap-3 py-4 px-6">
+                    <h3 className="lg:text-2xl md:text-xl text-lg font-bold text-black">
+                      {service.title}
+                    </h3>
+                    <p className="text-md text-gray-600 text-pretty">
+                      {service.description}
+                    </p>
+                    <span className="flex items-center gap-1 text-sm text-yellow-500">
+                      Detaylı İncele
+                      <span>
+                        <ChevronRight width={12} className="text-yellow-500" />
+                      </span>
                     </span>
-                  </span>
+                  </div>
+                  <BorderBeam
+                    colorFrom="#eab308"
+                    colorTo="#fff085"
+                    size={150}
+                    duration={10}
+                    delay={9 + index * 1.5}
+                  />
                 </div>
-                <BorderBeam
-                  colorFrom="#eab308"
-                  colorTo="#fff085"
-                  size={150}
-                  duration={10}
-                  delay={9 + index * 1.5}
-                />
-              </div>
-            </BlurFade>
-          </Link>
-        ))}
+              </BlurFade>
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   );

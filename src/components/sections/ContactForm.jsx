@@ -7,7 +7,7 @@ import SubmitButton from "@/components/form/SubmitButton";
 import BlurFade from "@/components/ui/blur-fade";
 import Chip from "../chip";
 
-function ContactForm({ map }) {
+function ContactForm() {
   const initialStates = {
     name: "",
     email: "",
@@ -50,7 +50,7 @@ function ContactForm({ map }) {
   };
 
   return (
-    <div className="grid md:grid-cols-2 gap-4 items-center">
+    <div className="grid w-full mx-auto gap-4 items-center">
       <BlurFade delay={0.5} inView>
         <form onSubmit={handleSubmit} encType="multipart/form-data">
           <div className="w-full flex flex-col gap-6 mx-auto">
@@ -107,18 +107,6 @@ function ContactForm({ map }) {
           </div>
         </form>
       </BlurFade>
-      {map && (
-        <BlurFade delay={0.5} inView>
-          <iframe
-            className="rounded-xl w-full h-[400px]"
-            src={map}
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </BlurFade>
-      )}
     </div>
   );
 }

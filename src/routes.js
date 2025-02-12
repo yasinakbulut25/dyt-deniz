@@ -16,7 +16,7 @@ export const sectionKeys = {
   blogs: "sectionBlogs",
   contact: "sectionContact",
   faqs: "sectionFaqs",
-  gallery: "sectionGallery",
+  // gallery: "sectionGallery",
 }
 
 export const routes = [
@@ -56,13 +56,13 @@ export const routes = [
     sectionKey: sectionKeys.blogs,
     hasDropdown: true
   },
-  {
-    name: 'Foto Galeri',
-    path: 'galeri',
-    sectionID: 'galeri',
-    icon: <ImageIcon width={16} color="#eab308" />,
-    sectionKey: sectionKeys.gallery
-  },
+  // {
+  //   name: 'Foto Galeri',
+  //   path: 'galeri',
+  //   sectionID: 'galeri',
+  //   icon: <ImageIcon width={16} color="#eab308" />,
+  //   sectionKey: sectionKeys.gallery
+  // },
   {
     name: 'İletişim',
     path: 'iletisim',
