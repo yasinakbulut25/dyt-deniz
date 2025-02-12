@@ -5,7 +5,6 @@ import {
   BellIcon,
   UserIcon,
   PenIcon,
-  HomeIcon,
   ImageIcon
 } from "@/icons";
 import { CalculatorIcon } from "lucide-react";
@@ -23,10 +22,11 @@ export const sectionKeys = {
 
 export const routes = [
   {
-    name: 'Ana Sayfa',
-    path: '/',
-    sectionID: 'ana-sayfa',
-    icon: <HomeIcon width={16} color="#eab308" />,
+    name: 'Hakkımda',
+    path: 'hakkimda',
+    sectionID: 'hakkimda',
+    icon: <UserIcon width={16} color="#eab308" />,
+    sectionKey: sectionKeys.about
   },
   {
     name: 'Hizmetler',
@@ -35,13 +35,6 @@ export const routes = [
     icon: <StethoscopeIcon width={16} color="#eab308" />,
     sectionKey: sectionKeys.services,
     hasDropdown: true
-  },
-  {
-    name: 'Hakkımda',
-    path: 'hakkimda',
-    sectionID: 'hakkimda',
-    icon: <UserIcon width={16} color="#eab308" />,
-    sectionKey: sectionKeys.about
   },
   {
     name: 'Yorumlar',
@@ -66,11 +59,11 @@ export const routes = [
     sectionKey: sectionKeys.faqs
   },
   {
-    name: 'İletişim',
-    path: 'iletisim',
-    sectionID: 'iletisim',
-    icon: <BellIcon width={16} color="#eab308" />,
-    sectionKey: sectionKeys.contact
+    name: 'BKİ Hesapla',
+    path: 'bki',
+    sectionID: 'bki',
+    icon: <CalculatorIcon width={16} color="#eab308" />,
+    sectionKey: sectionKeys.faqs
   },
   {
     name: 'Foto Galeri',
@@ -80,10 +73,10 @@ export const routes = [
     sectionKey: sectionKeys.gallery
   },
   {
-    name: 'BKİ Hesapla',
-    path: 'bki',
-    sectionID: 'bki',
-    icon: <CalculatorIcon width={16} color="#eab308" />,
-    sectionKey: sectionKeys.faqs
-  }
+    name: 'İletişim',
+    path: 'iletisim',
+    sectionID: 'iletisim',
+    icon: <BellIcon width={16} color="#eab308" />,
+    sectionKey: sectionKeys.contact
+  },
 ]

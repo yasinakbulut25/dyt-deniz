@@ -86,13 +86,15 @@ function Navbar() {
     <nav className="flex md:justify-center justify-start items-center w-full z-[50] py-4 duration-300 text-black bg-transparent">
       <div className="lg:flex flex-col hidden gap-4 items-center mx-auto justify-between w-full max-w-7xl h-full">
         <div className="flex flex-col items-center gap-2 text-center">
-          <Image
-            className="rounded-md object-cover w-[300px] h-[150px]"
-            src="/uploads/logo.png"
-            alt="Uzm. Diyetisyen Almina Meşin"
-            width={300}
-            height={150}
-          />
+          <Link href={BASE_URL}>
+            <Image
+              className="rounded-md object-cover w-[300px] h-[150px]"
+              src="/uploads/logo.png"
+              alt="Uzm. Diyetisyen Almina Meşin"
+              width={300}
+              height={150}
+            />
+          </Link>
           <b className="text-sm text-black">
             <i>This is the place where your dreams come true!</i>
           </b>

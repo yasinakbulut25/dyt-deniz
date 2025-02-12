@@ -26,8 +26,8 @@ export default function Page() {
         <CommentsSection />
         <BlogsSection />
         <FaqsSection />
-        <Gallery />
         <BMISection />
+        <Gallery />
         <ContactSection />
       </Suspense>
     </div>
