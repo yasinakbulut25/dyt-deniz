@@ -8,6 +8,7 @@ import {
   HomeIcon,
   ImageIcon
 } from "@/icons";
+import { CalculatorIcon } from "lucide-react";
 
 export const sectionKeys = {
   services: "sectionServices",
@@ -16,7 +17,8 @@ export const sectionKeys = {
   blogs: "sectionBlogs",
   contact: "sectionContact",
   faqs: "sectionFaqs",
-  // gallery: "sectionGallery",
+  gallery: "sectionGallery",
+  bki: "sectionBki",
 }
 
 export const routes = [
@@ -56,13 +58,13 @@ export const routes = [
     sectionKey: sectionKeys.blogs,
     hasDropdown: true
   },
-  // {
-  //   name: 'Foto Galeri',
-  //   path: 'galeri',
-  //   sectionID: 'galeri',
-  //   icon: <ImageIcon width={16} color="#eab308" />,
-  //   sectionKey: sectionKeys.gallery
-  // },
+  {
+    name: 'SSS',
+    path: 'sss',
+    sectionID: 'sss',
+    icon: <QuestionCircleIcon width={16} color="#eab308" />,
+    sectionKey: sectionKeys.faqs
+  },
   {
     name: 'İletişim',
     path: 'iletisim',
@@ -71,10 +73,17 @@ export const routes = [
     sectionKey: sectionKeys.contact
   },
   {
-    name: 'SSS',
-    path: 'sss',
-    sectionID: 'sss',
-    icon: <QuestionCircleIcon width={16} color="#eab308" />,
+    name: 'Foto Galeri',
+    path: 'galeri',
+    sectionID: 'galeri',
+    icon: <ImageIcon width={16} color="#eab308" />,
+    sectionKey: sectionKeys.gallery
+  },
+  {
+    name: 'BKİ Hesapla',
+    path: 'bki',
+    sectionID: 'bki',
+    icon: <CalculatorIcon width={16} color="#eab308" />,
     sectionKey: sectionKeys.faqs
   }
 ]

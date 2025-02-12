@@ -8,11 +8,12 @@ import BlogsSection from "@/components/sections/BlogsSection";
 import FaqsSection from "@/components/sections/FaqsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import Gallery from "@/components/sections/GallerySection";
+import BMISection from "@/components/sections/BMISection";
 
 export const metadata = {
-  title: "Uzm. Diyetisyen Almina Meşin | Kadın Sağlığı ve Tüp Bebek",
+  title: "Uzm. Diyetisyen Almina Meşin | Kişiye Özel Beslenme Danışmanlığı",
   description:
-    "Kadın Hastalıkları ve Doğum, Tüp Bebek Uzmanı ile sağlığınıza önem verin. Gebelik takibi, kısırlık tedavisi ve tüp bebek uygulamalarında uzman destek alın. Sağlıklı bir gelecek için yanınızdayız.",
+    "Sağlıklı beslenme ve ideal kilo yönetimi için uzman desteği alın. Kişiye özel diyet programları, kilo verme, sağlıklı yaşam ve beslenme danışmanlığı hizmetleriyle yanınızdayız.",
 };
 
 export default function Page() {
@@ -24,8 +25,9 @@ export default function Page() {
         <ServicesSection />
         <CommentsSection />
         <BlogsSection />
-        {/* <Gallery /> */}
         <FaqsSection />
+        <Gallery />
+        <BMISection />
         <ContactSection />
       </Suspense>
     </div>

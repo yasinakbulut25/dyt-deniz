@@ -10,7 +10,7 @@ import { sectionKeys } from "@/routes";
 export const metadata = {
   title: "Uzm. Diyetisyen Almina Meşin | Görüşler",
   description:
-    "Kadın Hastalıkları ve Doğum, Tüp Bebek Uzmanı ile sağlığınıza önem verin. Gebelik takibi, kısırlık tedavisi ve tüp bebek uygulamalarında uzman destek alın. Sağlıklı bir gelecek için yanınızdayız.",
+    "Sağlıklı beslenme ve ideal kilo yönetimi için uzman desteği alın. Kişiye özel diyet programları, kilo verme, sağlıklı yaşam ve beslenme danışmanlığı hizmetleriyle yanınızdayız.",
 };
 
 async function CommentsPage() {

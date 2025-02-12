@@ -1,7 +1,4 @@
-import { ChevronRight, PenIcon } from "@/icons";
-import { Button, Link } from "@nextui-org/react";
-import Image from "next/image";
-import BlurFade from "@/components/ui/blur-fade";
+import { PenIcon } from "@/icons";
 import SectionTitle from "@/components/sections/SectionTitle";
 import { getBlogs } from "@/api/endpoints";
 import BlogCard from "@/components/sections/BlogCard";
@@ -10,7 +7,7 @@ import { sectionKeys } from "@/routes";
 export const metadata = {
   title: "Uzm. Diyetisyen Almina Meşin | Yazılar",
   description:
-    "Kadın Hastalıkları ve Doğum, Tüp Bebek Uzmanı ile sağlığınıza önem verin. Gebelik takibi, kısırlık tedavisi ve tüp bebek uygulamalarında uzman destek alın. Sağlıklı bir gelecek için yanınızdayız.",
+    "Sağlıklı beslenme ve ideal kilo yönetimi için uzman desteği alın. Kişiye özel diyet programları, kilo verme, sağlıklı yaşam ve beslenme danışmanlığı hizmetleriyle yanınızdayız.",
 };
 
 async function Blogs({ isDetailPage, url }) {

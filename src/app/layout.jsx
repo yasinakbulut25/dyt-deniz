@@ -16,18 +16,18 @@ export default function RootLayout({ children }) {
       <head>
         <meta
           name="keywords"
-          content="Arzu Yurci, Dr. Arzu Yurci, Kadın Hastalıkları, Tüp Bebek, Gebelik Takibi, Doğum Uzmanı, Kadın Sağlığı, Kısırlık Tedavisi, Riskli Gebelik, Jinekolog"
+          content="Diyetisyen Almina Meşin, Almina Meşin, Uzm. Diyetisyen Almina Meşin, Diyetisyen, Beslenme Uzmanı, Sağlıklı Beslenme, Kilo Verme, Kilo Alma, Online Diyet, Sporcu Beslenmesi, Gebelikte Beslenme, Çocuk Beslenmesi, Diyet Programı, Kişiye Özel Diyet, Sağlıklı Yaşam, Beslenme Danışmanlığı"
         />
         <meta property="og:image" content="/uploads/page.png" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Kadın Hastalıkları ve Doğum | Tüp Bebek Uzmanı"
+          content="Uzm. Diyetisyen Almina Meşin | Beslenme uzmanı"
         />
         <meta
           name="twitter:description"
-          content="Kadın Hastalıkları ve Doğum, Tüp Bebek Uzmanı ile sağlığınıza önem verin. Gebelik takibi, kısırlık tedavisi ve tüp bebek uygulamalarında profesyonel destek alın."
+          content="Sağlıklı beslenme ve ideal kilo yönetimi için uzman desteği alın. Kişiye özel diyet programları, kilo verme, sağlıklı yaşam ve beslenme danışmanlığı hizmetleriyle yanınızdayız."
         />
         <meta name="twitter:image" content="/uploads/page.png" />
         <meta name="robots" content="index, follow" />
