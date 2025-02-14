@@ -42,7 +42,7 @@ function Footer() {
           <i className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
             developed by{" "}
             <a
-              href="https://www.linkedin.com/in/yasinakbulut/"
+              href={process.env.NEXT_PUBLIC_DEVELOPER_URL}
               target="_blank"
               className="font-semibold hover:text-yellow-500"
             >

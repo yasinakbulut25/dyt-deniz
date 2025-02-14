@@ -19,7 +19,8 @@ import { getBlogs, getServices } from "@/api/endpoints";
 import { sectionKeys } from "@/routes";
 
 function Navbar() {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [isOpen, setIsOpen] = useState(false);
+  const onOpenChange = () => setIsOpen(!isOpen);
   const [activeSection, setActiveSection] = useState("");
   const [dropdownRoutes, setDropdownRoutes] = useState({
     [sectionKeys.services]: false,
@@ -143,19 +144,21 @@ function Navbar() {
         <Button
           className="absolute top-2 left-4 min-w-max px-3"
           color="secondary"
-          onClick={onOpen}
+          onClick={onOpenChange}
           startContent={
             isOpen ? <XMarkIcon width={24} /> : <BarsIcon width={24} />
           }
         />
         <div className="w-full flex justify-center items-center flex-col text-center gap-2">
-          <Image
-            className="rounded-md object-cover w-[300px] h-[150px]"
-            src="/uploads/logo.png"
-            alt="Uzm. Diyetisyen Almina Meşin"
-            width={300}
-            height={150}
-          />
+          <Link href={BASE_URL}>
+            <Image
+              className="rounded-md object-cover w-[300px] h-[150px]"
+              src="/uploads/logo.png"
+              alt="Uzm. Diyetisyen Almina Meşin"
+              width={300}
+              height={150}
+            />
+          </Link>
           <b className="text-sm text-black">
             <i>This is the place where your dreams come true!</i>
           </b>

@@ -10,7 +10,7 @@ async function SectionTitle({ icon, sectionKey }) {
 
   return (
     <BlurFade delay={0.25} inView>
-      <div className="flex flex-col items-center gap-2 mb-8">
+      <div className="flex flex-col items-center gap-2 mb-8 text-center">
         {section.sectionSubtitle && (
           <AnimatedGradientText className="flex items-center gap-2">
             {icon ? (

@@ -145,7 +145,7 @@ const BMIForm = () => {
           <NumberTicker
             value={bmi}
             decimalPlaces={1}
-            className="whitespace-pre-wrap lg:text-8xl sm:text-6xl font-medium tracking-tighter text-black dark:text-white"
+            className="whitespace-pre-wrap lg:text-8xl sm:text-6xl text-5xl font-medium tracking-tighter text-black dark:text-white"
           />
           <p className="text-lg font-semibold mt-3">
             <span className={color}>{category}</span>
