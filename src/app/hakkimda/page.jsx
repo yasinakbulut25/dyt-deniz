@@ -43,9 +43,8 @@ async function AboutPage() {
   const data = await getUser();
   if (!data) return;
 
-  const { content, content_long, image } = data.about;
+  const { content_long, image } = data.about;
 
-  const fullContent = content + content_long;
   return (
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <SectionTitle
@@ -56,7 +55,7 @@ async function AboutPage() {
         <BlurFade delay={0.25} inView>
           <div
             className="article-content text-md text-black font-medium max-w-4xl text-pretty"
-            dangerouslySetInnerHTML={{ __html: fullContent }}
+            dangerouslySetInnerHTML={{ __html: content_long }}
           />
         </BlurFade>
         <BlurFade delay={0.25} inView>
