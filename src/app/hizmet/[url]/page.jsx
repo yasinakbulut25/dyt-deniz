@@ -1,7 +1,9 @@
 import React from "react";
-import { getService } from "@/api/endpoints";
+import { getService, getUser } from "@/api/endpoints";
 import ServicesSection from "@/components/sections/ServicesSection";
 import { BASE_URL } from "@/app/layout";
+import Link from "next/link";
+import { WhatsappIcon } from "@/icons";
 
 export async function generateMetadata({ params }) {
   const { url } = params;
@@ -39,10 +41,13 @@ async function ServiceDetail({ params }) {
   const param = await params;
   const url = param.url;
   const data = await getService(url);
+  const user = await getUser();
+
   const selectedData = data[0];
-  if (!selectedData) return;
+  if (!selectedData || !user) return;
 
   const { title, description, content, image } = selectedData;
+  const { whatsappPhone } = user.admin;
 
   return (
     <>
@@ -64,6 +69,13 @@ async function ServiceDetail({ params }) {
           className="article-content"
           dangerouslySetInnerHTML={{ __html: content }}
         />
+        <Link
+          href={`https://wa.me/${whatsappPhone}`}
+          className="flex items-center gap-2 text-md text-white py-2 px-3 rounded bg-green-500 w-max"
+        >
+          <WhatsappIcon width={16} className="text-white" />
+          İletişime Geç
+        </Link>
       </div>
 
       <ServicesSection isDetailPage={true} url={url} />
