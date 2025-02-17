@@ -41,7 +41,7 @@ async function CommentsSection({ isAddPage }) {
       <BlurFade
         delay={0.75}
         inView
-        className="flex items-center justify-center mt-6 gap-4"
+        className="flex items-center sm:flex-row flex-col justify-center mt-6 gap-4"
       >
         <Button
           className="bg-yellow-400 text-white"
