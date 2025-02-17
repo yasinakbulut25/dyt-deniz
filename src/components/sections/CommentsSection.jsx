@@ -7,8 +7,9 @@ import Link from "next/link";
 import CommentCard from "./CommentCard";
 import { getComments, getSections } from "@/api/endpoints";
 import { sectionKeys } from "@/routes";
+import { PlusIcon } from "lucide-react";
 
-async function CommentsSection() {
+async function CommentsSection({ isAddPage }) {
   const data = await getComments();
   const activeData = data.filter(
     (item) => Number(item.publish) === 1 && !item.deleted_at
@@ -40,7 +41,7 @@ async function CommentsSection() {
       <BlurFade
         delay={0.75}
         inView
-        className="flex items-center justify-center mt-6"
+        className="flex items-center justify-center mt-6 gap-4"
       >
         <Button
           className="bg-yellow-400 text-white"
@@ -50,6 +51,16 @@ async function CommentsSection() {
         >
           Tüm Yorumları Gör
         </Button>
+        {!isAddPage && (
+          <Button
+            className="bg-white border border-yellow-400 text-yellow-500 hover:bg-yellow-500 hover:text-white"
+            startContent={<PlusIcon className="w-4 h-4" />}
+            as={Link}
+            href="/yorum-ekle"
+          >
+            Görüşlerinizi Ekleyin
+          </Button>
+        )}
       </BlurFade>
     </section>
   );
