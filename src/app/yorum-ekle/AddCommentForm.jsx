@@ -90,9 +90,9 @@ function AddCommentForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-4 items-start mt-4 mb-16 max-w-3xl mx-auto"
+      className="flex flex-col gap-4 items-start mt-4 mb-16 px-4 max-w-3xl mx-auto"
     >
-      <div className="w-full flex items-center justify-center text-center">
+      <div className="w-full flex items-center justify-center text-center ">
         <BlurFade delay={0.25} inView>
           <div className="flex flex-col items-center gap-2 mb-4 text-center">
             <AnimatedGradientText className="flex items-center gap-2">
