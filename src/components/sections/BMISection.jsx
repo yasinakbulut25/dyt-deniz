@@ -3,8 +3,17 @@ import React from "react";
 import SectionTitle from "./SectionTitle";
 import { sectionKeys } from "@/routes";
 import BMIForm from "./BMIForm";
+import { getSections } from "@/api/endpoints";
 
-const BMISection = () => {
+export default async function BMISection() {
+  const sections = await getSections();
+  const section = sections.find(
+    (section) =>
+      section.sectionKey === sectionKeys.bki && Number(section.publish) === 1
+  );
+
+  if (!section) return null;
+
   return (
     <section className="md:container mx-auto px-4 mb-12" id="bki">
       <SectionTitle
@@ -14,6 +23,4 @@ const BMISection = () => {
       <BMIForm />
     </section>
   );
-};
-
-export default BMISection;
+}

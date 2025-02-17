@@ -6,7 +6,8 @@ export const fetchRequest = async (endpoint, method = 'GET', body = null) => {
     headers: {
       "Content-Type": "application/json"
     },
-    next: { revalidate: 120 }, // 2 dakika (120 saniye) cache süresi
+    cache: 'no-store'
+    // next: { revalidate: 120 }, // 2 dakika (120 saniye) cache süresi
   };
 
   if (body) {

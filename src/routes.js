@@ -63,7 +63,7 @@ export const routes = [
     path: 'bki',
     sectionID: 'bki',
     icon: <CalculatorIcon width={16} color="#eab308" />,
-    sectionKey: sectionKeys.faqs
+    sectionKey: sectionKeys.bki
   },
   {
     name: 'Foto Galeri',
