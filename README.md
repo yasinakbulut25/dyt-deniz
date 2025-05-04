@@ -1,3 +1,9 @@
+# Dietician Almina Meşin
+
+A responsive portfolio website built for a dietitian to highlight expertise, provide informational blog content, and enable remote client communication.
+
+[alminamesin.com](https://alminamesin.com)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
